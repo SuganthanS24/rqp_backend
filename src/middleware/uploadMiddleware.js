@@ -1,29 +1,31 @@
-import multer from 'multer'
-import path from 'path'
-import { fileURLToPath } from 'url'
+import multer from "multer";
+import path from "path";
+import { fileURLToPath } from "url";
+import { config } from "../config/env.js";
 
-const __dirname = path.dirname(fileURLToPath(import.meta.url))
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 const storage = multer.diskStorage({
   destination: function (req, file, cb) {
-    cb(null, path.join(__dirname, '../../uploads'))
+    cb(null, path.join(__dirname, "../../uploads"));
   },
   filename: function (req, file, cb) {
-    cb(null, Date.now() + path.extname(file.originalname))
-  }
-})
+    cb(null, Date.now() + path.extname(file.originalname));
+  },
+});
 
 const fileFilter = (req, file, cb) => {
-  const allowedMimes = ['image/jpeg', 'image/png', 'image/gif', 'image/webp']
+  const allowedMimes = config.allowedMimetypes;
   if (allowedMimes.includes(file.mimetype)) {
-    cb(null, true)
+    cb(null, true);
   } else {
-    cb(new Error('Invalid file type'), false)
+    cb(new Error("Invalid file type"), false);
   }
-}
+};
 
 export const upload = multer({
   storage,
   fileFilter,
-  limits: { fileSize: 5 * 1024 * 1024 }
-})
+  limits: { fileSize: config.uploadSizeLimit },
+});
+

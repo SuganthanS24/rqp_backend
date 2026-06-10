@@ -1,4 +1,4 @@
-import { config } from '../config/env.js';
+import { config } from "../config/env.js";
 
 export const defaultQuotation = {
   quotationNo: "QT-2024-001",
@@ -19,7 +19,8 @@ export const defaultQuotation = {
   },
   product: {
     productName: "Go2 Edu U1 Robot",
-    productDescription: "Go2 Edu U1 Robot with suitcase, Battery, charger, spare foot shoes 4 units, Remote controller, 15000 Mah Battery",
+    productDescription:
+      "Go2 Edu U1 Robot with suitcase, Battery, charger, spare foot shoes 4 units, Remote controller, 15000 Mah Battery",
     quantity: 1,
     unitPrice: 910000,
     packing: 0,
@@ -35,12 +36,18 @@ export const defaultQuotation = {
 export const defaultCompany = {
   companyName: "ROBOMIRACLE",
   tagline: "INNOVATION IN ROBOTICS",
-  about: "At Robomiracle Technologies, we specialize in delivering innovative robotic solutions that redefine efficiency, precision, and automation across industries. Our expertise lies in developing cutting-edge robotics systems tailored to meet the unique needs of businesses, empowering them to achieve unparalleled operational excellence. From intelligent automation to custom-built robotic platforms, we bring advanced technology to life, ensuring seamless integration and transformative results. With a commitment to innovation and quality, we strive to be a trusted partner for organizations looking to embrace the future of robotics.",
-  solution: "Robomiracle Technologies provides a wide range of innovative robotic solutions to meet the diverse challenges of modern industries. From advanced automation systems to customized robotic platforms, our solutions enhance efficiency and deliver measurable value. We specialize in industrial automation, service robotics, and educational robotics, catering to various applications with precision and reliability.\n\nAt Robomiracle, we offer end-to-end support, from design to deployment, ensuring seamless integration and maximum impact. Our solutions drive efficiency, reduce costs, and foster innovation, making robotics a transformative force for industries worldwide.",
-  howItWorks: "At Robomiracle Technologies, our process begins with understanding your unique challenges and goals. We design customized robotic solutions, integrating advanced technologies like AI and IoT to meet specific needs. Each system undergoes rigorous testing to ensure precision and reliability.\n\nOur team collaborates closely with clients throughout implementation, providing seamless integration and training for optimal performance. Post-deployment, we offer ongoing support and maintenance to keep operations running smoothly.",
-  vision: "At Robomiracle Technologies, we specialize in delivering innovative robotic solutions that redefine efficiency, precision, and automation across industries. Our expertise lies in developing cutting-edge robotics systems tailored to meet the unique needs of businesses, empowering them to achieve unparalleled operational excellence. From intelligent automation to custom-built robotic platforms, we bring advanced technology to life, ensuring seamless integration and transformative results.",
-  mission: "Our mission at Robomiracle Technologies is to deliver innovative and accessible robotic solutions that empower businesses and improve lives. We are dedicated to driving technological advancement through cutting-edge designs, reliable automation, and customized services, ensuring value creation and seamless integration for our clients. Through collaboration and excellence, we aim to make robotics a transformative force across industries.",
-  whyChooseUs: "At Robomiracle Technologies, we combine innovation, expertise, and customer-centricity to deliver unparalleled robotic solutions. Our team of skilled professionals ensures every product is tailored to meet your unique needs, driving efficiency and transforming operations. With a commitment to cutting-edge technology and rigorous quality standards, we provide reliable and scalable systems that adapt to evolving demands.\n\nWe pride ourselves on offering end-to-end support, from conceptualization to deployment and beyond. Our focus on building lasting partnerships ensures transparency, timely delivery, and exceptional service.",
+  about:
+    "At Robomiracle Technologies, we specialize in delivering innovative robotic solutions that redefine efficiency, precision, and automation across industries. Our expertise lies in developing cutting-edge robotics systems tailored to meet the unique needs of businesses, empowering them to achieve unparalleled operational excellence. From intelligent automation to custom-built robotic platforms, we bring advanced technology to life, ensuring seamless integration and transformative results. With a commitment to innovation and quality, we strive to be a trusted partner for organizations looking to embrace the future of robotics.",
+  solution:
+    "Robomiracle Technologies provides a wide range of innovative robotic solutions to meet the diverse challenges of modern industries. From advanced automation systems to customized robotic platforms, our solutions enhance efficiency and deliver measurable value. We specialize in industrial automation, service robotics, and educational robotics, catering to various applications with precision and reliability.\n\nAt Robomiracle, we offer end-to-end support, from design to deployment, ensuring seamless integration and maximum impact. Our solutions drive efficiency, reduce costs, and foster innovation, making robotics a transformative force for industries worldwide.",
+  howItWorks:
+    "At Robomiracle Technologies, our process begins with understanding your unique challenges and goals. We design customized robotic solutions, integrating advanced technologies like AI and IoT to meet specific needs. Each system undergoes rigorous testing to ensure precision and reliability.\n\nOur team collaborates closely with clients throughout implementation, providing seamless integration and training for optimal performance. Post-deployment, we offer ongoing support and maintenance to keep operations running smoothly.",
+  vision:
+    "At Robomiracle Technologies, we specialize in delivering innovative robotic solutions that redefine efficiency, precision, and automation across industries. Our expertise lies in developing cutting-edge robotics systems tailored to meet the unique needs of businesses, empowering them to achieve unparalleled operational excellence. From intelligent automation to custom-built robotic platforms, we bring advanced technology to life, ensuring seamless integration and transformative results.",
+  mission:
+    "Our mission at Robomiracle Technologies is to deliver innovative and accessible robotic solutions that empower businesses and improve lives. We are dedicated to driving technological advancement through cutting-edge designs, reliable automation, and customized services, ensuring value creation and seamless integration for our clients. Through collaboration and excellence, we aim to make robotics a transformative force across industries.",
+  whyChooseUs:
+    "At Robomiracle Technologies, we combine innovation, expertise, and customer-centricity to deliver unparalleled robotic solutions. Our team of skilled professionals ensures every product is tailored to meet your unique needs, driving efficiency and transforming operations. With a commitment to cutting-edge technology and rigorous quality standards, we provide reliable and scalable systems that adapt to evolving demands.\n\nWe pride ourselves on offering end-to-end support, from conceptualization to deployment and beyond. Our focus on building lasting partnerships ensures transparency, timely delivery, and exceptional service.",
   address: "RS puram Coimbatore",
   phone: ["+91 63804 73177", "+91 79071 08559"],
   email: "sales@robomiracle.com",
@@ -58,25 +65,62 @@ export const defaultBankDetails = {
 export const defaultTerms = {
   title: "TERMS & CONDITIONS",
   points: [
-    { heading: "Quotation Acceptance", description: "Once accepted by email or signature, the order is final and binding." },
-    { heading: "Cancellation", description: "Orders cannot be cancelled after acceptance." },
-    { heading: "Refund Policy", description: "No refund under any condition. Only manufacturing defects will be replaced after inspection. No monetary refund." },
-    { heading: "Return Policy", description: "No return once the delivery note is signed. Any issue must be reported within 48 hours." },
-    { heading: "Delivery & Delay", description: "Delays, if caused by us, will attract 0.3% of product value per week (6 working days) as adjustment in final payment. Maximum limit: 3% of total order value." },
-    { heading: "Service Level Agreement (SLA)", description: "Response within 48 business hours. Resolution within 7 working days (subject to part availability). Support via call, mail, or remote session. On-site visit may attract service/travel charges. Hardware covered under warranty; software support as per SLA." },
-    { heading: "Payment", description: "Full payment as per terms. Delay beyond 7 working days attracts 1.5% interest per month. Ownership transfers only after full payment." },
-    { heading: "Force Majeure", description: "Robomiracle is not liable for delays due to factors beyond control (transport, customs, natural events, strikes, etc.)." },
-    { heading: "Jurisdiction", description: "Subject to Coimbatore, Tamil Nadu jurisdiction only." },
-    { heading: "Acceptance", description: "Proceeding with this quotation confirms acceptance of all above terms." },
+    {
+      heading: "Quotation Acceptance",
+      description:
+        "Once accepted by email or signature, the order is final and binding.",
+    },
+    {
+      heading: "Cancellation",
+      description: "Orders cannot be cancelled after acceptance.",
+    },
+    {
+      heading: "Refund Policy",
+      description:
+        "No refund under any condition. Only manufacturing defects will be replaced after inspection. No monetary refund.",
+    },
+    {
+      heading: "Return Policy",
+      description:
+        "No return once the delivery note is signed. Any issue must be reported within 48 hours.",
+    },
+    {
+      heading: "Delivery & Delay",
+      description:
+        "Delays, if caused by us, will attract 0.3% of product value per week (6 working days) as adjustment in final payment. Maximum limit: 3% of total order value.",
+    },
+    {
+      heading: "Service Level Agreement (SLA)",
+      description:
+        "Response within 48 business hours. Resolution within 7 working days (subject to part availability). Support via call, mail, or remote session. On-site visit may attract service/travel charges. Hardware covered under warranty; software support as per SLA.",
+    },
+    {
+      heading: "Payment",
+      description:
+        "Full payment as per terms. Delay beyond 7 working days attracts 1.5% interest per month. Ownership transfers only after full payment.",
+    },
+    {
+      heading: "Force Majeure",
+      description:
+        "Robomiracle is not liable for delays due to factors beyond control (transport, customs, natural events, strikes, etc.).",
+    },
+    {
+      heading: "Jurisdiction",
+      description: "Subject to Coimbatore, Tamil Nadu jurisdiction only.",
+    },
+    {
+      heading: "Acceptance",
+      description:
+        "Proceeding with this quotation confirms acceptance of all above terms.",
+    },
   ],
 };
 
 export const defaultTeam = [
   { name: "Sooraj Sukumaran", role: "CTO & Co-Founder", photoUrl: "" },
-  { name: "Rudresh N R",      role: "CEO & Co-Founder", photoUrl: "" },
-  { name: "Sasivarana S",     role: "General Manager",  photoUrl: "" },
+  { name: "Rudresh N R", role: "CEO & Co-Founder", photoUrl: "" },
+  { name: "Sasivarana S", role: "General Manager", photoUrl: "" },
 ];
-
 
 // ─── HELPERS ──────────────────────────────────────────────────
 
@@ -84,8 +128,14 @@ const fmt = (n) => Number(n || 0).toLocaleString("en-IN");
 
 const formatDate = (dateStr) => {
   try {
-    return new Date(dateStr).toLocaleDateString("en-IN", { day: "numeric", month: "short", year: "numeric" });
-  } catch { return dateStr || ""; }
+    return new Date(dateStr).toLocaleDateString("en-IN", {
+      day: "numeric",
+      month: "short",
+      year: "numeric",
+    });
+  } catch {
+    return dateStr || "";
+  }
 };
 
 // Safely get terms points array regardless of input shape:
@@ -110,12 +160,17 @@ const getTermsTitle = (terms) => {
 };
 
 const teamPhoto = (member) => {
-  const url = member.photoUrl || member.photo || member.image || member.imageUrl;
+  const url =
+    member.photoUrl || member.photo || member.image || member.imageUrl;
   if (url) {
     return `<img src="${url}" class="team-card-img" alt="${member.name}" />`;
   }
   const initials = (member.name || "?")
-    .split(" ").map((w) => w[0]).join("").slice(0, 2).toUpperCase();
+    .split(" ")
+    .map((w) => w[0])
+    .join("")
+    .slice(0, 2)
+    .toUpperCase();
   return `
     <div style="width:140px;height:140px;border-radius:50%;background:linear-gradient(135deg,#1e3a8a,#2563eb);display:flex;align-items:center;justify-content:center;">
       <span style="font-size:48px;font-weight:800;color:white;letter-spacing:2px;">${initials}</span>
@@ -123,10 +178,9 @@ const teamPhoto = (member) => {
 };
 
 const freeOrPrice = (val) =>
-  (val === 0 || val === null || val === undefined || val === "0")
+  val === 0 || val === null || val === undefined || val === "0"
     ? `<span style="font-weight:700;color:#16a34a;">FREE</span>`
     : `<span style="font-weight:700;">&#8377;${fmt(val)}</span>`;
-
 
 // ─── SHARED CSS ───────────────────────────────────────────────
 
@@ -231,23 +285,27 @@ const sharedCSS = `
   .logo-box { background:white; border:1px solid #e2e8f0; border-radius:10px; height:56px; display:flex; align-items:center; justify-content:center; font-size:10px; font-weight:700; color:#475569; text-align:center; padding:6px; }
 `;
 
-
 // ─── MAIN TEMPLATE FUNCTION ───────────────────────────────────
 
-
-export const generateHTMLTemplate = (quotation, company, bankDetails, terms, team) => {
-  const p  = quotation.product || {};
-  const c  = quotation.preparedFor || {};
+export const generateHTMLTemplate = (
+  quotation,
+  company,
+  bankDetails,
+  terms,
+  team,
+) => {
+  const p = quotation.product || {};
+  const c = quotation.preparedFor || {};
   const subtotal = (p.unitPrice || 0) * (p.quantity || 1);
 
   // ── Normalise terms ──
-  const termsTitle  = getTermsTitle(terms);
+  const termsTitle = getTermsTitle(terms);
   const termsPoints = getTermsPoints(terms);
 
   // ── Normalise phone display ──
   const phoneDisplay = Array.isArray(company.phone)
     ? company.phone.join(" &nbsp;&middot;&nbsp; ")
-    : (company.phone || "");
+    : company.phone || "";
 
   const iconLn = `<svg width="12" height="12" viewBox="0 0 24 24" fill="white"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>`;
   const iconIg = `<svg width="12" height="12" viewBox="0 0 24 24" fill="white"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>`;
@@ -265,13 +323,15 @@ export const generateHTMLTemplate = (quotation, company, bankDetails, terms, tea
 
     <!-- Logo row -->
     <div style="display:flex;align-items:center;gap:16px;margin-bottom:32px;">
-      ${company.logo
-        ? `<div style="width:52px;height:52px;border-radius:12px;border:1px solid #e2e8f0;background:white;display:flex;align-items:center;justify-content:center;overflow:hidden;box-shadow:0 2px 10px rgba(0,0,0,0.05);">
+      ${
+        company.logo
+          ? `<div style="width:52px;height:52px;border-radius:12px;border:1px solid #e2e8f0;background:white;display:flex;align-items:center;justify-content:center;overflow:hidden;box-shadow:0 2px 10px rgba(0,0,0,0.05);">
              <img src="${company.logo}" style="width:80%;height:80%;object-fit:contain;" alt="Logo" />
            </div>`
-        : `<div style="width:52px;height:52px;border-radius:12px;background:linear-gradient(135deg,#1d4ed8,#7c3aed);display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+          : `<div style="width:52px;height:52px;border-radius:12px;background:linear-gradient(135deg,#1d4ed8,#7c3aed);display:flex;align-items:center;justify-content:center;flex-shrink:0;">
              <span style="font-size:24px;font-weight:900;color:white;">${(company.companyName || "R").charAt(0)}</span>
-           </div>`}
+           </div>`
+      }
       <div>
         <div style="font-size:20px;font-weight:900;color:#0f172a;letter-spacing:-0.5px;">${company.companyName || "ROBOMIRACLE"}</div>
         <div style="font-size:10px;font-weight:700;color:#3b82f6;letter-spacing:2px;text-transform:uppercase;">${company.tagline || "INNOVATION IN ROBOTICS"}</div>
@@ -322,7 +382,9 @@ export const generateHTMLTemplate = (quotation, company, bankDetails, terms, tea
   </div>
 </div>`;
 
-  const pageAbout = () => quotation.includeAbout !== false ? `
+  const pageAbout = () =>
+    quotation.includeAbout !== false
+      ? `
 <div class="page">
   <div class="top-bar"></div>
   <div class="blob blob-tr"></div>
@@ -348,9 +410,12 @@ export const generateHTMLTemplate = (quotation, company, bankDetails, terms, tea
     </div>
 
   </div>
-</div>` : "";
+</div>`
+      : "";
 
-  const pageVision = () => quotation.includeVisionMission !== false ? `
+  const pageVision = () =>
+    quotation.includeVisionMission !== false
+      ? `
 <div class="page">
   <div class="top-bar"></div>
   <div class="blob blob-tl"></div>
@@ -378,7 +443,8 @@ export const generateHTMLTemplate = (quotation, company, bankDetails, terms, tea
     </div>
 
   </div>
-</div>` : "";
+</div>`
+      : "";
 
   const pagePricing = () => `
 <div class="page">
@@ -401,9 +467,11 @@ export const generateHTMLTemplate = (quotation, company, bankDetails, terms, tea
     <!-- Big Hero Image -->
     <div style="width:100%;height:320px;border-radius:16px;background:linear-gradient(135deg,#f4f7fa 0%,#ffffff 100%);border:1px solid #e2e8f0;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;flex-shrink:0;margin-bottom:24px;">
       <div style="position:absolute;inset:0;background-image:linear-gradient(rgba(56,189,248,.1) 1px,transparent 1px),linear-gradient(90deg,rgba(56,189,248,.1) 1px,transparent 1px);background-size:20px 20px;"></div>
-      ${p.productImage 
-        ? `<img src="${p.productImage}" style="height:90%;width:90%;object-fit:contain;position:relative;z-index:1;drop-shadow:0 10px 20px rgba(0,0,0,0.1);" alt="Product" />` 
-        : `<div style="position:relative;z-index:1;color:#94a3b8;font-weight:700;">No Product Image</div>`}
+      ${
+        p.productImage
+          ? `<img src="${p.productImage}" style="height:90%;width:90%;object-fit:contain;position:relative;z-index:1;drop-shadow:0 10px 20px rgba(0,0,0,0.1);" alt="Product" />`
+          : `<div style="position:relative;z-index:1;color:#94a3b8;font-weight:700;">No Product Image</div>`
+      }
     </div>
 
     <!-- Table Card -->
@@ -431,19 +499,19 @@ export const generateHTMLTemplate = (quotation, company, bankDetails, terms, tea
           <tr>
             <td style="border-bottom:1px solid #f1f5f9;padding:16px 24px;font-size:11px;font-weight:700;color:#94a3b8;">02</td>
             <td style="border-bottom:1px solid #f1f5f9;padding:16px 24px;font-size:12px;font-weight:600;color:#334155;">Packing &amp; Forwarding</td>
-            <td style="border-bottom:1px solid #f1f5f9;padding:16px 24px;text-align:right;font-size:13px;font-weight:600;color:#334155;">${freeOrPrice(p.packing) === 'FREE' ? '0' : Number(p.packing).toLocaleString()}</td>
+            <td style="border-bottom:1px solid #f1f5f9;padding:16px 24px;text-align:right;font-size:13px;font-weight:600;color:#334155;">${freeOrPrice(p.packing) === "FREE" ? "0" : Number(p.packing).toLocaleString()}</td>
           </tr>
           <!-- Insurance -->
           <tr>
             <td style="border-bottom:1px solid #f1f5f9;padding:16px 24px;font-size:11px;font-weight:700;color:#94a3b8;">03</td>
             <td style="border-bottom:1px solid #f1f5f9;padding:16px 24px;font-size:12px;font-weight:600;color:#334155;">Transit Insurance</td>
-            <td style="border-bottom:1px solid #f1f5f9;padding:16px 24px;text-align:right;font-size:13px;font-weight:600;color:#334155;">${freeOrPrice(p.transitInsurance) === 'FREE' ? '0' : Number(p.transitInsurance).toLocaleString()}</td>
+            <td style="border-bottom:1px solid #f1f5f9;padding:16px 24px;text-align:right;font-size:13px;font-weight:600;color:#334155;">${freeOrPrice(p.transitInsurance) === "FREE" ? "0" : Number(p.transitInsurance).toLocaleString()}</td>
           </tr>
           <!-- Shipping -->
           <tr>
             <td style="border-bottom:1px solid #e2e8f0;padding:16px 24px;font-size:11px;font-weight:700;color:#94a3b8;">04</td>
             <td style="border-bottom:1px solid #e2e8f0;padding:16px 24px;font-size:12px;font-weight:600;color:#334155;">Shipping &amp; Handling</td>
-            <td style="border-bottom:1px solid #e2e8f0;padding:16px 24px;text-align:right;font-size:13px;font-weight:600;color:#334155;">${freeOrPrice(p.shipping) === 'FREE' ? '0' : Number(p.shipping).toLocaleString()}</td>
+            <td style="border-bottom:1px solid #e2e8f0;padding:16px 24px;text-align:right;font-size:13px;font-weight:600;color:#334155;">${freeOrPrice(p.shipping) === "FREE" ? "0" : Number(p.shipping).toLocaleString()}</td>
           </tr>
           <!-- Subtotals inside the white section, right aligned -->
           <tr>
@@ -498,7 +566,9 @@ export const generateHTMLTemplate = (quotation, company, bankDetails, terms, tea
   </div>
 </div>`;
 
-  const pageTerms = () => quotation.includeTerms !== false && termsPoints.length > 0 ? `
+  const pageTerms = () =>
+    quotation.includeTerms !== false && termsPoints.length > 0
+      ? `
 <div class="page">
   <div class="top-bar"></div>
   <div class="blob blob-br"></div>
@@ -508,7 +578,9 @@ export const generateHTMLTemplate = (quotation, company, bankDetails, terms, tea
 
     <div class="card card-accent" style="padding:0;overflow:hidden;flex:1;">
       <div style="padding:0 28px;overflow:hidden;">
-        ${termsPoints.map((pt, i) => `
+        ${termsPoints
+          .map(
+            (pt, i) => `
           <div style="padding:14px 0;${i < termsPoints.length - 1 ? "border-bottom:1px solid #f1f5f9;" : ""}">
             <div style="display:flex;align-items:flex-start;gap:10px;">
               <div style="min-width:24px;height:24px;border-radius:50%;background:linear-gradient(135deg,#1d4ed8,#7c3aed);display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:800;color:white;flex-shrink:0;margin-top:1px;">${i + 1}</div>
@@ -518,14 +590,19 @@ export const generateHTMLTemplate = (quotation, company, bankDetails, terms, tea
               </div>
             </div>
           </div>
-        `).join("")}
+        `,
+          )
+          .join("")}
       </div>
     </div>
 
   </div>
-</div>` : "";
+</div>`
+      : "";
 
-  const pageTeam = () => quotation.includeTeam !== false && Array.isArray(team) && team.length > 0 ? `
+  const pageTeam = () =>
+    quotation.includeTeam !== false && Array.isArray(team) && team.length > 0
+      ? `
 <div class="page">
   <div class="top-bar"></div>
   <div class="blob blob-tl"></div>
@@ -539,7 +616,10 @@ export const generateHTMLTemplate = (quotation, company, bankDetails, terms, tea
     </div>
 
     <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:40px;width:100%;margin-bottom:40px;">
-      ${team.slice(0, 6).map(member => `
+      ${team
+        .slice(0, 6)
+        .map(
+          (member) => `
         <div class="team-card">
           <div class="team-card-img-wrapper">
             ${teamPhoto(member)}
@@ -548,21 +628,24 @@ export const generateHTMLTemplate = (quotation, company, bankDetails, terms, tea
             <div style="font-size:22px;font-weight:900;color:white;letter-spacing:-0.5px;text-shadow:0 1px 2px rgba(0,0,0,0.3);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;width:100%;text-align:center;">${member.name || "&nbsp;"}</div>
             <div style="font-size:13px;font-weight:700;color:#fbcfe8;text-shadow:0 1px 2px rgba(0,0,0,0.3);margin-bottom:12px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;letter-spacing:1px;text-transform:uppercase;width:100%;text-align:center;">${member.designation || member.role || "&nbsp;"}</div>
             <div style="display:flex;justify-content:center;gap:12px;min-height:32px;">
-              ${member.linkedin ? `<a href="${member.linkedin}" target="_blank" class="team-icon-btn">${iconLn}</a>` : ''}
-              ${member.instagram ? `<a href="${member.instagram}" target="_blank" class="team-icon-btn">${iconIg}</a>` : ''}
-              ${member.email ? `<a href="mailto:${member.email}" class="team-icon-btn">${iconEm}</a>` : ''}
-              ${member.phone ? `<a href="tel:${member.phone}" class="team-icon-btn">${iconPh}</a>` : ''}
+              ${member.linkedin ? `<a href="${member.linkedin}" target="_blank" class="team-icon-btn">${iconLn}</a>` : ""}
+              ${member.instagram ? `<a href="${member.instagram}" target="_blank" class="team-icon-btn">${iconIg}</a>` : ""}
+              ${member.email ? `<a href="mailto:${member.email}" class="team-icon-btn">${iconEm}</a>` : ""}
+              ${member.phone ? `<a href="tel:${member.phone}" class="team-icon-btn">${iconPh}</a>` : ""}
             </div>
           </div>
         </div>
-      `).join("")}
+      `,
+        )
+        .join("")}
     </div>
 
     <div style="margin-top:auto;text-align:center;width:100%;padding-bottom:16px;">
       <div style="display:inline-flex;align-items:center;gap:12px;background:#f8fafc;border:1px solid #e2e8f0;border-radius:14px;padding:12px 28px;">
-        ${company.logo 
-          ? `<img src="${company.logo}" style="height:36px;width:auto;object-fit:contain;" alt="Logo" />` 
-          : `<div style="width:36px;height:36px;border-radius:9px;background:linear-gradient(135deg,#1d4ed8,#7c3aed);display:flex;align-items:center;justify-content:center;">
+        ${
+          company.logo
+            ? `<img src="${company.logo}" style="height:36px;width:auto;object-fit:contain;" alt="Logo" />`
+            : `<div style="width:36px;height:36px;border-radius:9px;background:linear-gradient(135deg,#1d4ed8,#7c3aed);display:flex;align-items:center;justify-content:center;">
                <span style="font-size:18px;font-weight:900;color:white;">R</span>
              </div>`
         }
@@ -571,7 +654,8 @@ export const generateHTMLTemplate = (quotation, company, bankDetails, terms, tea
     </div>
 
   </div>
-</div>` : "";
+</div>`
+      : "";
 
   const pageContact = () => `
 <div class="page">
@@ -595,18 +679,34 @@ export const generateHTMLTemplate = (quotation, company, bankDetails, terms, tea
     <div class="section-title" style="font-size:20px;margin-bottom:8px;">Clients &amp; Collaborations</div>
     <div style="display:grid; grid-template-columns: repeat(4, 1fr); gap: 14px; justify-items: center; margin-top: 8px;">
       ${[
-        "TCS", "Sri Chaitanya", "Nalanda College", "HICET",
-        "LuLu", "GITAM", "Allen", "PSG",
-        "SBI", "Sri Satya Sai University", "SRMIST", "Thamarai International School",
-        "Sri Ramakrishna College of Arts & Science", "TVS", "Coca-Cola", "KPR Institute of Engineering and Technology"
-      ].map((name, i) => `
+        "TCS",
+        "Sri Chaitanya",
+        "Nalanda College",
+        "HICET",
+        "LuLu",
+        "GITAM",
+        "Allen",
+        "PSG",
+        "SBI",
+        "Sri Satya Sai University",
+        "SRMIST",
+        "Thamarai International School",
+        "Sri Ramakrishna College of Arts & Science",
+        "TVS",
+        "Coca-Cola",
+        "KPR Institute of Engineering and Technology",
+      ]
+        .map(
+          (name, i) => `
         <div style="display:flex; flex-direction:column; align-items:center; gap:6px;">
           <div style="width:100px; height:80px; border-radius:10px; background:white; border:1px solid #e2e8f0; display:flex; align-items:center; justify-content:center; overflow:hidden; box-shadow:0 4px 10px rgba(0,0,0,0.05);">
             <img src="${config.frontendUrl}/clients/c${i + 1}.webp" style="max-width:80%; max-height:80%; object-fit:contain;" alt="${name}" />
           </div>
           <div style="font-size:10px; font-weight:700; color:#475569; text-align:center;">${name}</div>
         </div>
-      `).join("")}
+      `,
+        )
+        .join("")}
     </div>
 
     <div class="divider" style="margin:20px 0;flex-shrink:0;"></div>
@@ -651,34 +751,34 @@ export const generateHTMLTemplate = (quotation, company, bankDetails, terms, tea
   let order = quotation.pageOrder;
   if (!order || order.length === 0) {
     order = [
-      { id: 'cover', type: 'standard' },
-      { id: 'about', type: 'standard' },
-      { id: 'vision', type: 'standard' },
-      { id: 'pricing', type: 'standard' },
-      { id: 'terms', type: 'standard' },
-      { id: 'team', type: 'standard' },
-      { id: 'contact', type: 'standard' }
+      { id: "cover", type: "standard" },
+      { id: "about", type: "standard" },
+      { id: "vision", type: "standard" },
+      { id: "pricing", type: "standard" },
+      { id: "terms", type: "standard" },
+      { id: "team", type: "standard" },
+      { id: "contact", type: "standard" },
     ];
   }
 
   const customPagesMap = {};
   if (quotation.customPages) {
-    quotation.customPages.forEach(cp => {
+    quotation.customPages.forEach((cp) => {
       customPagesMap[cp.id] = cp.imageUrl;
     });
   }
 
-  let bodyHtml = '';
+  let bodyHtml = "";
   for (const item of order) {
-    if (item.type === 'standard') {
-      if (item.id === 'cover') bodyHtml += pageCover();
-      if (item.id === 'about') bodyHtml += pageAbout();
-      if (item.id === 'vision') bodyHtml += pageVision();
-      if (item.id === 'pricing') bodyHtml += pagePricing();
-      if (item.id === 'terms') bodyHtml += pageTerms();
-      if (item.id === 'team') bodyHtml += pageTeam();
-      if (item.id === 'contact') bodyHtml += pageContact();
-    } else if (item.type === 'custom') {
+    if (item.type === "standard") {
+      if (item.id === "cover") bodyHtml += pageCover();
+      if (item.id === "about") bodyHtml += pageAbout();
+      if (item.id === "vision") bodyHtml += pageVision();
+      if (item.id === "pricing") bodyHtml += pagePricing();
+      if (item.id === "terms") bodyHtml += pageTerms();
+      if (item.id === "team") bodyHtml += pageTeam();
+      if (item.id === "contact") bodyHtml += pageContact();
+    } else if (item.type === "custom") {
       if (customPagesMap[item.id]) {
         bodyHtml += renderCustomPage(customPagesMap[item.id]);
       }
@@ -703,5 +803,5 @@ export const generateDefaultQuotation = () =>
     defaultCompany,
     defaultBankDetails,
     defaultTerms,
-    defaultTeam
+    defaultTeam,
   );

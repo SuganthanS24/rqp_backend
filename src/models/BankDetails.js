@@ -1,4 +1,4 @@
-import mongoose from 'mongoose'
+import mongoose from "mongoose";
 
 const bankDetailsSchema = new mongoose.Schema({
   accountName: String,
@@ -8,12 +8,12 @@ const bankDetailsSchema = new mongoose.Schema({
   branch: String,
   createdAt: {
     type: Date,
-    default: Date.now
+    default: Date.now,
   },
   updatedAt: {
     type: Date,
-    default: Date.now
-  }
-})
+    default: Date.now,
+  },
+});
 
-export default mongoose.model('BankDetails', bankDetailsSchema)
+export default mongoose.model("BankDetails", bankDetailsSchema);

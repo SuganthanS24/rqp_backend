@@ -1,4 +1,4 @@
-import mongoose from 'mongoose'
+import mongoose from "mongoose";
 
 const companySchema = new mongoose.Schema({
   companyName: String,
@@ -7,7 +7,7 @@ const companySchema = new mongoose.Schema({
   phone: String,
   logo: {
     type: String,
-    default: null
+    default: null,
   },
   about: String,
   vision: String,
@@ -15,19 +15,21 @@ const companySchema = new mongoose.Schema({
   solution: String,
   howItWorks: String,
   whyChooseUs: String,
-  customPages: [{
-    id: String,
-    imageUrl: String,
-    label: String
-  }],
+  customPages: [
+    {
+      id: String,
+      imageUrl: String,
+      label: String,
+    },
+  ],
   createdAt: {
     type: Date,
-    default: Date.now
+    default: Date.now,
   },
   updatedAt: {
     type: Date,
-    default: Date.now
-  }
-})
+    default: Date.now,
+  },
+});
 
-export default mongoose.model('Company', companySchema)
+export default mongoose.model("Company", companySchema);

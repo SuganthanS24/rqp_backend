@@ -1,10 +1,10 @@
-import mongoose from 'mongoose'
+import mongoose from "mongoose";
 
 const productSchema = new mongoose.Schema({
   productName: {
     type: String,
-    required: [true, 'Please provide a product name'],
-    trim: true
+    required: [true, "Please provide a product name"],
+    trim: true,
   },
   category: String,
   height: String,
@@ -17,24 +17,24 @@ const productSchema = new mongoose.Schema({
   features: [String],
   basePrice: {
     type: Number,
-    required: [true, 'Please provide a base price']
+    required: [true, "Please provide a base price"],
   },
   gstPercentage: {
     type: Number,
-    default: 18
+    default: 18,
   },
   productImage: {
     type: String,
-    default: null
+    default: null,
   },
   active: {
     type: Boolean,
-    default: true
+    default: true,
   },
   createdAt: {
     type: Date,
-    default: Date.now
-  }
-})
+    default: Date.now,
+  },
+});
 
-export default mongoose.model('Product', productSchema)
+export default mongoose.model("Product", productSchema);

@@ -1,4 +1,4 @@
-import express from 'express'
+import express from "express";
 import {
   getCompanyDetails,
   updateCompanyDetails,
@@ -9,31 +9,29 @@ import {
   getTeamMembers,
   addTeamMember,
   updateTeamMember,
-  deleteTeamMember
-} from '../controllers/companyController.js'
-import { protect } from '../middleware/authMiddleware.js'
-import { upload } from '../middleware/uploadMiddleware.js'
+  deleteTeamMember,
+} from "../controllers/companyController.js";
+import { protect } from "../middleware/authMiddleware.js";
+import { upload } from "../middleware/uploadMiddleware.js";
 
-const router = express.Router()
+const router = express.Router();
 
-router.use(protect)
+// Company details endpoints
+router.get("/company", protect, getCompanyDetails);
+router.put("/company", [protect, upload.single("logo")], updateCompanyDetails);
 
-// Company
-router.get('/company', getCompanyDetails)
-router.put('/company', upload.single('logo'), updateCompanyDetails)
+// Bank Details endpoints
+router.get("/bank-details", protect, getBankDetails);
+router.put("/bank-details", protect, updateBankDetails);
 
-// Bank Details
-router.get('/bank-details', getBankDetails)
-router.put('/bank-details', updateBankDetails)
+// Quotation Terms endpoints
+router.get("/terms", protect, getTerms);
+router.put("/terms", protect, updateTerms);
 
-// Terms
-router.get('/terms', getTerms)
-router.put('/terms', updateTerms)
+// Team Member management endpoints
+router.get("/team", protect, getTeamMembers);
+router.post("/team", [protect, upload.single("photo")], addTeamMember);
+router.put("/team/:id", [protect, upload.single("photo")], updateTeamMember);
+router.delete("/team/:id", protect, deleteTeamMember);
 
-// Team
-router.get('/team', getTeamMembers)
-router.post('/team', upload.single('photo'), addTeamMember)
-router.put('/team/:id', upload.single('photo'), updateTeamMember)
-router.delete('/team/:id', deleteTeamMember)
-
-export default router
+export default router;

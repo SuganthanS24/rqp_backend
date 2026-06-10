@@ -1,10 +1,10 @@
-import mongoose from 'mongoose'
+import mongoose from "mongoose";
 
 const quotationSchema = new mongoose.Schema({
   quotationNo: {
     type: String,
     unique: true,
-    required: true
+    required: true,
   },
   quotationDate: Date,
   preparedFor: {
@@ -15,7 +15,7 @@ const quotationSchema = new mongoose.Schema({
     district: String,
     state: String,
     email: String,
-    phone: String
+    phone: String,
   },
   product: {
     productId: mongoose.Schema.Types.ObjectId,
@@ -28,37 +28,41 @@ const quotationSchema = new mongoose.Schema({
     transitInsurance: Number,
     shipping: Number,
     grandTotal: Number,
-    productImage: String
+    productImage: String,
   },
   status: {
     type: String,
-    enum: ['draft', 'sent', 'accepted'],
-    default: 'draft'
+    enum: ["draft", "sent", "accepted"],
+    default: "draft",
   },
   includeAbout: { type: Boolean, default: true },
   includeVisionMission: { type: Boolean, default: true },
   includeTerms: { type: Boolean, default: true },
   includeTeam: { type: Boolean, default: true },
   pdfUrl: String,
-  customPages: [{
-    id: String,
-    imageUrl: String,
-    label: String
-  }],
-  pageOrder: [{
-    id: String,
-    type: { type: String, enum: ['standard', 'custom'] },
-    label: String
-  }],
+  customPages: [
+    {
+      id: String,
+      imageUrl: String,
+      label: String,
+    },
+  ],
+  pageOrder: [
+    {
+      id: String,
+      type: { type: String, enum: ["standard", "custom"] },
+      label: String,
+    },
+  ],
   createdBy: mongoose.Schema.Types.ObjectId,
   createdAt: {
     type: Date,
-    default: Date.now
+    default: Date.now,
   },
   updatedAt: {
     type: Date,
-    default: Date.now
-  }
-})
+    default: Date.now,
+  },
+});
 
-export default mongoose.model('Quotation', quotationSchema)
+export default mongoose.model("Quotation", quotationSchema);

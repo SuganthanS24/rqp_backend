@@ -1,4 +1,4 @@
-import mongoose from 'mongoose'
+import mongoose from "mongoose";
 
 const teamMemberSchema = new mongoose.Schema({
   name: String,
@@ -9,16 +9,16 @@ const teamMemberSchema = new mongoose.Schema({
   phone: { type: String, default: "" },
   photo: {
     type: String,
-    default: null
+    default: null,
   },
   order: {
     type: Number,
-    default: 1
+    default: 1,
   },
   createdAt: {
     type: Date,
-    default: Date.now
-  }
-})
+    default: Date.now,
+  },
+});
 
-export default mongoose.model('TeamMember', teamMemberSchema)
+export default mongoose.model("TeamMember", teamMemberSchema);
