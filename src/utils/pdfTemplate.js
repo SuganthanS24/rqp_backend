@@ -191,9 +191,24 @@ const sharedCSS = `
   body {
     font-family: 'Outfit', sans-serif;
     color: #1e293b;
-    background: white;
+    background: #374151;
     -webkit-print-color-adjust: exact;
     print-color-adjust: exact;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 24px 0;
+    gap: 16px;
+    min-height: 100vh;
+  }
+
+  @media print {
+    body {
+      background: white;
+      padding: 0;
+      gap: 0;
+      display: block;
+    }
   }
 
   /* ── Each page is exactly A4, never overflows ── */
