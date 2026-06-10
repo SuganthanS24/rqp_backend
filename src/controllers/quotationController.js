@@ -336,12 +336,22 @@ export const generatePdf = async (req, res, next) => {
     const fileName = `${quotation.quotationNo}.pdf`;
     const filePath = path.join(dir, fileName);
 
+    const bgBase64 = getBase64Image("src/assets/bg.webp");
+    const clientImagesBase64 = [];
+    for (let i = 1; i <= 16; i++) {
+      clientImagesBase64.push(getBase64Image(`src/assets/clients/c${i}.webp`));
+    }
+
     const htmlContent = generateHTMLTemplate(
       quotationObj,
       company,
       bankDetails,
       terms,
       processedTeam,
+      {
+        bgBase64,
+        clientImagesBase64,
+      },
     );
 
     // Use persistent browser instance for massive speedup

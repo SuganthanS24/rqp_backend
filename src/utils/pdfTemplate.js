@@ -293,6 +293,7 @@ export const generateHTMLTemplate = (
   bankDetails,
   terms,
   team,
+  assets = {},
 ) => {
   const p = quotation.product || {};
   const c = quotation.preparedFor || {};
@@ -341,7 +342,7 @@ export const generateHTMLTemplate = (
     <!-- Hero zone — fixed height so it never pushes content off page -->
     <div style="width:100%;height:420px;border-radius:16px;background:linear-gradient(135deg,#f4f7fa 0%,#ffffff 100%);border:1px solid #e2e8f0;display:flex;align-items:flex-end;justify-content:center;position:relative;overflow:hidden;flex-shrink:0;">
       <div style="position:absolute;inset:0;background-image:linear-gradient(rgba(56,189,248,.1) 1px,transparent 1px),linear-gradient(90deg,rgba(56,189,248,.1) 1px,transparent 1px);background-size:20px 20px;"></div>
-      <img src="${config.frontendUrl}/bg.webp" style="height:100%;width:100%;object-fit:cover;object-position:bottom center;position:relative;z-index:1;" alt="Background" />
+      <img src="${assets.bgBase64 || `${config.frontendUrl}/bg.webp`}" style="height:100%;width:100%;object-fit:cover;object-position:bottom center;position:relative;z-index:1;" alt="Background" />
     </div>
 
     <!-- Title block -->
@@ -700,7 +701,7 @@ export const generateHTMLTemplate = (
           (name, i) => `
         <div style="display:flex; flex-direction:column; align-items:center; gap:6px;">
           <div style="width:100px; height:80px; border-radius:10px; background:white; border:1px solid #e2e8f0; display:flex; align-items:center; justify-content:center; overflow:hidden; box-shadow:0 4px 10px rgba(0,0,0,0.05);">
-            <img src="${config.frontendUrl}/clients/c${i + 1}.webp" style="max-width:80%; max-height:80%; object-fit:contain;" alt="${name}" />
+            <img src="${(assets.clientImagesBase64 && assets.clientImagesBase64[i]) || `${config.frontendUrl}/clients/c${i + 1}.webp`}" style="max-width:80%; max-height:80%; object-fit:contain;" alt="${name}" />
           </div>
           <div style="font-size:10px; font-weight:700; color:#475569; text-align:center;">${name}</div>
         </div>
