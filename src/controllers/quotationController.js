@@ -25,6 +25,7 @@ const getBrowser = async () => {
     }
     browserInstance = await puppeteer.launch({
       headless: "new",
+      executablePath: process.env.PUPPETEER_EXECUTABLE_PATH || undefined,
       args,
     });
   }
