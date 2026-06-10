@@ -355,44 +355,11 @@ export const generatePdf = async (req, res, next) => {
       },
     );
 
-    // Use persistent browser instance for massive speedup
-    const browser = await getBrowser();
-    const page = await browser.newPage();
+    // Return the HTML content directly to the frontend!
+    res.send(htmlContent);
 
-    // Set content immediately, then manually wait for all images to load
-    // This avoids networkidle0 timeouts caused by Vite HMR websockets
-    await page.setContent(htmlContent, { waitUntil: "domcontentloaded", timeout: 60000 });
-
-    await page.evaluate(async () => {
-      const imgs = Array.from(document.querySelectorAll("img"));
-      await Promise.all(
-        imgs.map((img) => {
-          if (img.complete) return Promise.resolve();
-          return new Promise((resolve) => {
-            img.addEventListener("load", resolve);
-            img.addEventListener("error", resolve); // Resolve even on error to prevent hang
-          });
-        }),
-      );
-    });
-
-    await page.pdf({
-      path: filePath,
-      format: "A4",
-      printBackground: true,
-      margin: { top: "0", right: "0", bottom: "0", left: "0" },
-    });
-
-    await page.close();
-
-    quotation.pdfUrl = `/uploads/quotation-pdfs/${fileName}`;
-    await quotation.save();
-
-    res.status(200).json({
-      message: "PDF generated successfully",
-      pdfUrl: quotation.pdfUrl,
-    });
   } catch (error) {
+    console.error("Error generating HTML for PDF:", error);
     next(error);
   }
 };
