@@ -7,26 +7,38 @@ import TeamMember from "../models/TeamMember.js";
 import fs from "fs";
 import path from "path";
 import puppeteer from "puppeteer";
+import puppeteerCore from "puppeteer-core";
+import chromium from "@sparticuz/chromium";
 import { generateHTMLTemplate } from "../utils/pdfTemplate.js";
 import { config } from "../config/env.js";
 
 
 let browserInstance = null;
 const getBrowser = async () => {
-  if (!browserInstance || !browserInstance.connected) {
-    const args = [
-      "--no-sandbox",
-      "--disable-setuid-sandbox",
-      "--disable-dev-shm-usage",
-      "--disable-gpu",
-    ];
-    if (process.platform !== "win32") {
-      args.push("--no-zygote", "--single-process");
+  if (!browserInstance || !browserInstance.isConnected()) {
+    const isProduction = process.env.NODE_ENV === "production" || process.env.RENDER;
+
+    if (isProduction) {
+      console.log("Launching @sparticuz/chromium for Render production...");
+      browserInstance = await puppeteerCore.launch({
+        args: chromium.args,
+        defaultViewport: chromium.defaultViewport,
+        executablePath: await chromium.executablePath(),
+        headless: chromium.headless,
+        ignoreHTTPSErrors: true,
+      });
+    } else {
+      console.log("Launching standard puppeteer for local development...");
+      browserInstance = await puppeteer.launch({
+        headless: "new",
+        args: [
+          "--no-sandbox",
+          "--disable-setuid-sandbox",
+          "--disable-dev-shm-usage",
+          "--disable-gpu",
+        ],
+      });
     }
-    browserInstance = await puppeteer.launch({
-      headless: "new",
-      args,
-    });
   }
   return browserInstance;
 };
