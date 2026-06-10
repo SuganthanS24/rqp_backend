@@ -805,11 +805,56 @@ export const generateHTMLTemplate = (
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Quotation &mdash; ${company.companyName || "Robomiracle"}</title>
   <style>${sharedCSS}</style>
+  <style>
+    /* ── Responsive page scaling for small screens ── */
+    @media screen and (max-width: 850px) {
+      body {
+        padding: 12px 0;
+        gap: 12px;
+      }
+      .page {
+        transform-origin: top center;
+      }
+    }
+  </style>
 </head>
 <body>
 ${bodyHtml}
+<script>
+  (function() {
+    var PAGE_WIDTH_PX = 794; // 210mm at 96dpi
+
+    function scalePages() {
+      var vw = window.innerWidth;
+      if (vw < PAGE_WIDTH_PX) {
+        var scale = (vw - 16) / PAGE_WIDTH_PX;
+        var pages = document.querySelectorAll('.page');
+        var scaledHeight = 1122 * scale; // 297mm at 96dpi * scale
+        pages.forEach(function(page) {
+          page.style.transform = 'scale(' + scale + ')';
+          page.style.transformOrigin = 'top center';
+          page.style.marginBottom = -(1122 - scaledHeight) + 'px';
+          page.style.marginTop = '0';
+        });
+        document.body.style.gap = '8px';
+      } else {
+        var pages = document.querySelectorAll('.page');
+        pages.forEach(function(page) {
+          page.style.transform = '';
+          page.style.marginBottom = '';
+          page.style.marginTop = '';
+        });
+        document.body.style.gap = '';
+      }
+    }
+
+    scalePages();
+    window.addEventListener('resize', scalePages);
+  })();
+</script>
 </body>
 </html>`;
 };
